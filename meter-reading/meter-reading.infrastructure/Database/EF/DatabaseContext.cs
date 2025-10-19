@@ -15,7 +15,7 @@ namespace web_api_db.Infrastructure.Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer("Data Source=meter-read.c3y6qffhz31h.us-east-1.rds.amazonaws.com;User ID=admin;Password=7nT1mDHnu1OVrXAslwqR;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("");
             base.OnConfiguring(optionsBuilder);
         }
 
