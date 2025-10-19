@@ -1,9 +1,9 @@
 ﻿using meter_reading.Domain.Entities;
 using meter_reading.Domain.Interfaces;
 using System.Linq.Expressions;
-using web_api_db.Infrastructure.Database;
+using meter_reading.Infrastructure.Database;
 
-namespace web_api_db.Core.Repository
+namespace meter_reading.Application.Repository
 {
     public class AccountRepository : IRepository<Account>
     {

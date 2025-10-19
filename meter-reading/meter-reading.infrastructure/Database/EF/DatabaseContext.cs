@@ -1,7 +1,7 @@
 ﻿using meter_reading.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace web_api_db.Infrastructure.Database
+namespace meter_reading.Infrastructure.Database
 {
     public class DatabaseContext : DbContext
     {

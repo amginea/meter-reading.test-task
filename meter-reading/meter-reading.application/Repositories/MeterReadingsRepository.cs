@@ -2,9 +2,9 @@
 using meter_reading.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using web_api_db.Infrastructure.Database;
+using meter_reading.Infrastructure.Database;
 
-namespace web_api_db.Core.Repositories
+namespace meter_reading.Application.Repositories
 {
     public class MeterReadingsRepository : IRepository<MeterReading>
     {

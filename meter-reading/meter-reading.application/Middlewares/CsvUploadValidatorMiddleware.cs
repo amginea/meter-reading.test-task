@@ -1,6 +1,5 @@
 ﻿using meter_reading.Application.Constants;
 using meter_reading.Application.Exceptions;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 
 namespace meter_reading.Application.Middlewares
@@ -20,14 +19,6 @@ namespace meter_reading.Application.Middlewares
                 throw new BadRequestException("Csv file was not provided!");
 
             await _next(context);
-        }
-    }
-
-    public static class CsvUploadMiddlewareExtensions
-    {
-        public static IApplicationBuilder UseCsvUploadValidator(this IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<CsvUploadValidatorMiddleware>();
         }
     }
 }

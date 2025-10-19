@@ -1,13 +1,13 @@
 using meter_reading.Application.CsvMappers;
 using meter_reading.Application.Filters;
-using meter_reading.Application.Middlewares;
+using meter_reading.Application.Extenstions;
 using meter_reading.Domain.Entities;
 using meter_reading.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using web_api_db.Core.Repositories;
-using web_api_db.Core.Repository;
-using web_api_db.Core.Services;
-using web_api_db.Infrastructure.Database;
+using meter_reading.Application.Repositories;
+using meter_reading.Application.Services;
+using meter_reading.Infrastructure.Database;
+using meter_reading.Application.Repository;
 
 namespace meter_reading.presentation
 {

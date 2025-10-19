@@ -2,7 +2,7 @@
 using meter_reading.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace web_api_db.Core.Services
+namespace meter_reading.Application.Services
 {
     public class MeterReadingsService : IService<MeterReading>
     {
@@ -23,7 +23,6 @@ namespace web_api_db.Core.Services
 
         public async Task<int> Upload(List<MeterReading> newMeterReadings)
         {
-            throw new Exception("Test Exception from MeterReadingsService");
             var meterReadings = newMeterReadings
                 .Select(_ => new { _.AccountId, _.MeterReadingDateTime, _.MeterReadValue })
                 .Distinct();
