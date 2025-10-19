@@ -36,6 +36,18 @@ namespace meter_reading.presentation
             builder.Services.AddScoped<IRepository<Account>, AccountRepository>();
             builder.Services.AddScoped<IService<MeterReading>, MeterReadingsService>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("MyPolicy",
+                    policy =>
+                    {
+                        policy
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -45,6 +57,8 @@ namespace meter_reading.presentation
             }
 
             app.UseExceptionHandler("/error");
+
+            app.UseCors("MyPolicy");
 
             app.UseHttpsRedirection();
 
